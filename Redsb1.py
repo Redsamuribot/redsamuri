@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import PUY
-from PUY.lib.curve.ttypes import *
+import LINETCR
+from LINTCR.lib.curve.ttypes import *
 from datetime import datetime
 import time, random, sys, ast, re, os, io, json, subprocess, threading, string, codecs, requests, ctypes, urllib, urllib2, urllib3, wikipedia, tempfile
 from bs4 import BeautifulSoup
@@ -13,20 +13,17 @@ from threading import Thread
 from googletrans import Translator
 #JANGAN LUPA =>  sudo pip install bs4 => sudo pip install BeautifulSoup => sudo pip install urllib => sudo pip install requests => sudo pip install gTTS
 
-cl = PUY.LINE()
+cl = LINETCR.LINE()
 cl.login(token="EquVoMnyvdI8p3RlkCt6.Lkg8ohUsFOz1yZrKJtfpHG.boJsv4URU2/6laSKrxmeyRSnry3jgzqNvzNjsu87ykM=")
 cl.loginResult()
 
-#cl = PUY.LINE()
-#cl.login(token="EpHTw46Q4ywGh0hYMHq1.SQs6jlixSB1Km2QkJmOrOq.5Z4fI8DX/csv1FnJxz6jQRWd1BmoRhZBro4rH0hN8cA=")
-#cl.loginResult()
 
 print "\n[ ลอคอินRedselfbotสำเร็จแล้ว ]"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpmsg ="""╔═════════════
-(╣••ґ̰̰̈́é∂̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
+(╣Redsamuri bot╣)
 ║═════════════
 ╠-> google (text)
 ╠-> playstore (text)
