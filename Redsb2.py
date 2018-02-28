@@ -11,7 +11,6 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 red = LINETCR.LINE()
-#nadya.login(qr=True)
 red.login(token="EquhPsn8LplTsfWtrRG6.Lkg8ohUsFOz1yZrKJtfpHG.FNvuuNnHIlvsnRvx05UYNJ1O7hPI5KOh6rA7oVPQB2k=")
 red.loginResult()
 print "\n=====[Sukses Login]====="
@@ -150,7 +149,7 @@ groupMessage ="""
 ║    ✴ line.me/ti/p/~samuri5✴
 ╚═════════════════════════
 """
-tjia="u99cde2e2a4a4b11bfd4cc418913e8986"
+tjia="u656b0ca994a1c9b462f9feb6f5ae3177"
 
 setMessage ="""
 ╔═════════════════════════
@@ -265,7 +264,7 @@ backup1.displayName = contact.displayName
 backup1.statusMessage = contact.statusMessage                        
 backup1.pictureStatus = contact.pictureStatus
 
-responsename = nadya.getProfile().displayName
+responsename = red.getProfile().displayName
 
 
 wait = {
