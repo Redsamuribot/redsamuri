@@ -17,7 +17,7 @@ ki2 = LINETCR.LINE()
 ki2.login(token="EquVoMnyvdI8p3RlkCt6.Lkg8ohUsFOz1yZrKJtfpHG.boJsv4URU2/6laSKrxmeyRSnry3jgzqNvzNjsu87ykM=")
 ki2.loginResult()
 
-print "login success plak"
+print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -554,7 +554,7 @@ def bot(op):
                   cl.sendText(msg.to,"The stafflist is empty")
               else:
                   cl.sendText(msg.to,"Tunggu...")
-                  mc = "||Admin ૦Ո૯ ƿɿ૯८૯ ら૯ՆԲც૦੮||\n=====================\n"
+                  mc = "||Admin Redsamuri||\n=====================\n"
                   for mi_d in admin:
                       mc += "••>" +cl.getContact(mi_d).displayName + "\n"
                   cl.sendText(msg.to,mc)
@@ -726,7 +726,7 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Luffy buka qr","Luffy open qr"]:
+            elif msg.text in ["Red1 buka qr","Red1 open qr"]:
                 if msg.toType == 2:
                     X = ki.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -740,7 +740,7 @@ def bot(op):
                         ki.sendText(msg.to,"Can not be used outside the group")
                     else:
                         ki.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Zorro buka qr","Zorro open qr"]:
+            elif msg.text in ["Red2 buka qr","Red2 open qr"]:
                 if msg.toType == 2:
                     X = ki2.getGroup(msg.to)
                     X.preventJoinByTicket = False
