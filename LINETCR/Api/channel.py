@@ -65,7 +65,7 @@ class Channel:
         print ".......*..lovelove....*"
         print "........*..love....*"
         print "..........*....*"
-        print "[ CREATOR ] : SATAN"
+        print "[ CREATOR ] : Redsamuri"
         print "[ refreshToken ] :" + result.refreshToken
         print "[ obs_token ] :" + result.obsToken
         print "[ token ] :" + result.token
