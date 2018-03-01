@@ -74,7 +74,7 @@ helpself ="""
 ╠➩เลียนแบบ @
 ╠➩คืนร่าง
 ╠➩อ่านคท/ปิดคท
-╠➩ดึง
+╠➩Invite
 ╠➩Getgroup image
 ╠➩Getmid @
 ╠➩ส่องโปรไฟล @
@@ -148,10 +148,10 @@ helptranslate ="""
 ╠->[Say-jp]
 ╚═════════════════"""
 
-KAC=[cl,cl]
+KAC=[cl]
 mid = cl.getProfile().mid
 mid = cl.getProfile().mid
-Bots=[mid,mid]
+Bots=[mid,"u94a1bc387b927e86756334648d314f86","u5b35c9714ca359616335efed888537a8","ube52b8931eee2e15a1b689377e3e5637","u1aedef8b888ae108d96bacbc5054e679","u99cde2e2a4a4b11bfd4cc418913e8986","u1865fbab05ea885ca7bd481ec35c9a1d","u46a050ebcc66a90b47fae6256547cc53","u656b0ca994a1c9b462f9feb6f5ae3177","ub5abe828cd964292195c3c59d6322033"]
 admin=["u94a1bc387b927e86756334648d314f86","u5b35c9714ca359616335efed888537a8","ube52b8931eee2e15a1b689377e3e5637","u1aedef8b888ae108d96bacbc5054e679","u99cde2e2a4a4b11bfd4cc418913e8986","u1865fbab05ea885ca7bd481ec35c9a1d","u46a050ebcc66a90b47fae6256547cc53","u656b0ca994a1c9b462f9feb6f5ae3177","ub5abe828cd964292195c3c59d6322033""uc360193fd87f05f352673cadbd9f2947","u3a737b8dc7135de09ceb6741c46d709f","ub2a4ba24b217b1bd64336a8a8cca11a1","uecdd917f87c7a68b90fe3055cd79fb48"]
 
 wait = {
