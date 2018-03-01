@@ -433,7 +433,7 @@ def bot(op):
                     pass
                 else:
                     cl.sendText(op.param1,str(wait["message"]))
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.from_ in mimic["target"] and mimic["status"] == True and mimic["target"][msg.from_] == True:
                     text = msg.text
@@ -468,13 +468,13 @@ def bot(op):
             if msg.contentType == 16:
                 url = msg.contentMetadata["postEndUrl"]
                 cl.like(url[25:58], url[66:], likeType=1001)
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.from_ in mimic["target"] and mimic["status"] == True and mimic["target"][msg.from_] == True:
                     text = msg.text
                     if text is not None:
                         cl.sendText(msg.to,text)
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.to in settings["simiSimi"]:
                 if settings["simiSimi"][msg.to] == True:
@@ -1268,9 +1268,9 @@ def bot(op):
                        print " Spammed !"
 
 #==============================================================================#
-            elif msg.text in ["ดึง"]:
+            elif msg.text in ["Invite"]:
                 wait["invite"] = True
-                cl.sendText(msg.to,"ส่งคทมาเลยลูกพี่")
+                cl.sendText(msg.to,"เปิดเชิญเรียบร้อย")
             
             elif msg.text in ["อ่านคท"]:
                 wait["contact"] = True
@@ -1885,7 +1885,7 @@ def bot(op):
                         cl.sendText(msg.to, g.mid)
                     else:
                         pass
-            elif "สอดแนม " in msg.text:
+            elif "สอดแนม" in msg.text:
                 key = eval(msg.contentMetadata["MENTION"])
                 key1 = key["MENTIONEES"][0]["M"]
                 contact = cl.getContact(key1)
@@ -2046,7 +2046,7 @@ def bot(op):
                 cl.sendText(msg.to,path)
             elif "เลียนแบบ @" in msg.text:
                    print "[COPY] Ok"
-                   _name = msg.text.replace("Mycopy @","")
+                   _name = msg.text.replace("เลียนแบบ @","")
                    _nametarget = _name.rstrip('  ')
                    gs = cl.getGroup(msg.to)
                    targets = []
@@ -2370,7 +2370,7 @@ def bot(op):
                               
             elif "ขอเพลง " in msg.text:
                 try:
-                    songname = msg.text.lower().replace("Music ","")
+                    songname = msg.text.lower().replace("ขอเพลง ","")
                     params = {'songname': songname}
                     r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
                     data = r.text
