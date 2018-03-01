@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Chucky_Bot
+#redsamuri_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
@@ -13,7 +13,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 red = LINETCR.LINE()
 red.login(token="EquhPsn8LplTsfWtrRG6.Lkg8ohUsFOz1yZrKJtfpHG.FNvuuNnHIlvsnRvx05UYNJ1O7hPI5KOh6rA7oVPQB2k=")
 red.loginResult()
-print "\n=====[Sukses Login]====="
+print "\n=====[redbot Login]====="
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -254,7 +254,7 @@ helpMessage ="""
 
 KAC=[red]
 mid = red.getProfile().mid
-Bots=[mid]
+Bots=[mid,"u94a1bc387b927e86756334648d314f86","u5b35c9714ca359616335efed888537a8","ube52b8931eee2e15a1b689377e3e5637","u1aedef8b888ae108d96bacbc5054e679","u99cde2e2a4a4b11bfd4cc418913e8986","u1865fbab05ea885ca7bd481ec35c9a1d","u46a050ebcc66a90b47fae6256547cc53","u656b0ca994a1c9b462f9feb6f5ae3177","ub5abe828cd964292195c3c59d6322033"]
 Creator=["u94a1bc387b927e86756334648d314f86","u5b35c9714ca359616335efed888537a8","ube52b8931eee2e15a1b689377e3e5637","u1aedef8b888ae108d96bacbc5054e679","u99cde2e2a4a4b11bfd4cc418913e8986","u1865fbab05ea885ca7bd481ec35c9a1d","u46a050ebcc66a90b47fae6256547cc53","u656b0ca994a1c9b462f9feb6f5ae3177","ub5abe828cd964292195c3c59d6322033"]
 admin=["u685f98d0edab398bbbc0bcfdf0a33be1","u94a1bc387b927e86756334648d314f86","u5b35c9714ca359616335efed888537a8","ube52b8931eee2e15a1b689377e3e5637","u1aedef8b888ae108d96bacbc5054e679","u99cde2e2a4a4b11bfd4cc418913e8986","u1865fbab05ea885ca7bd481ec35c9a1d","u46a050ebcc66a90b47fae6256547cc53","u656b0ca994a1c9b462f9feb6f5ae3177","ub5abe828cd964292195c3c59d6322033","uc360193fd87f05f352673cadbd9f2947","u3a737b8dc7135de09ceb6741c46d709f","ub2a4ba24b217b1bd64336a8a8cca11a1","uecdd917f87c7a68b90fe3055cd79fb48","ub4aee366a1b1607f7201b788843f1876"]
 
@@ -577,15 +577,15 @@ def bot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgintip Aja Niih. . .\nChat Kek Idiih (-__-)   ")
+                                        red.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgintip Aja Niih. . .\nChat Kek Idiih (-__-)   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                     else:
-                                        nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nBetah Banget Jadi Penonton. . .\nChat Napa (-__-)   ")
+                                        red.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nBetah Banget Jadi Penonton. . .\nChat Napa (-__-)   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                 else:
-                                    nadya.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgapain Kak Ngintip Aja???\nSini Gabung Chat...   ")
+                                    red.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgapain Kak Ngintip Aja???\nSini Gabung Chat...   ")
                                     time.sleep(0.2)
                                     summon(op.param1,[op.param2])
                         else:
@@ -618,7 +618,7 @@ def bot(op):
 		    G = red.getGroup(op.param1)
                     if len(G.members) <= wait["memberscancel"]:
                         red.acceptGroupInvitation(op.param1)
-                        red.sendText(op.param1,"Maaf " + nadya.getContact(op.param2).displayName + "\nMember Kurang Dari 30 Orang\nUntuk Info, Silahkan Chat Owner Kami!")
+                        red.sendText(op.param1,"Maaf " + red.getContact(op.param2).displayName + "\nMember Kurang Dari 30 Orang\nUntuk Info, Silahkan Chat Owner Kami!")
                         red.leaveGroup(op.param1)                        
 		    else:
                         red.acceptGroupInvitation(op.param1)
@@ -791,10 +791,10 @@ def bot(op):
           if wait["Sambutan"] == True:
             if op.param2 in Creator:
                 return
-            ginfo = nadya.getGroup(op.param1)
-            contact = nadya.getContact(op.param2)
+            ginfo = red.getGroup(op.param1)
+            contact = red.getContact(op.param2)
             image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            red.sendText(op.param1,"Hallo " + nadya.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nBudayakan Cek Note\nDan Semoga Betah Disini ^_^")
+            red.sendText(op.param1,"Hallo " + red.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nBudayakan Cek Note\nDan Semoga Betah Disini ^_^")
             c = Message(to=op.param1, from_=None, text=None, contentType=13)
             c.contentMetadata={'mid':op.param2}
             red.sendMessage(c)  
@@ -811,7 +811,7 @@ def bot(op):
           if wait["Sambutan"] == True:
             if op.param2 in Creator:
                 return
-            red.sendText(op.param1,"Good Bye " + nadya.getContact(op.param2).displayName +  "\nSee You Next Time . . . (p′︵‵。) 🤗")
+            red.sendText(op.param1,"Good Bye " + red.getContact(op.param2).displayName +  "\nSee You Next Time . . . (p′︵‵。) 🤗")
             d = Message(to=op.param1, from_=None, text=None, contentType=7)
             d.contentMetadata={
                                     "STKID": "13269542",
@@ -820,7 +820,7 @@ def bot(op):
             red.sendMessage(d)                  
             print "MEMBER HAS LEFT THE GROUP"
             
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             
             if msg.from_ in mimic["target"] and mimic["status"] == True and mimic["target"][msg.from_] == True:
@@ -842,7 +842,7 @@ def bot(op):
 
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["kickMention"] == True:
-                     contact = nadya.getContact(msg.from_)
+                     contact = red.getContact(msg.from_)
                      cName = contact.displayName
                      balas = ["Aku Bilang Jangan Ngetag Lagi " + cName + "\nAku Kick Kamu! Sorry, Byee!!!"]
                      ret_ = random.choice(balas)                     
@@ -857,7 +857,7 @@ def bot(op):
                               
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention"] == True:
-                     contact = nadya.getContact(msg.from_)
+                     contact = red.getContact(msg.from_)
                      cName = contact.displayName
                      balas = ["Dont Tag!! Lagi Sibuk",cName + " Ngapain Ngetag?",cName + " Nggak Usah Tag-Tag! Kalo Penting Langsung Pc Aja","Dia Lagi Off", cName + " Kenapa Tag Saya?","Dia Lagi Tidur\nJangan Di Tag " + cName, "Jangan Suka Tag Gua " + cName, "Kamu Siapa " + cName + "?", "Ada Perlu Apa " + cName + "?","Woii " + cName + " Jangan Ngetag, Riibut!"]
                      ret_ = random.choice(balas)
@@ -871,7 +871,7 @@ def bot(op):
                               
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention2"] == True:          
-                    contact = nadya.getContact(msg.from_)
+                    contact = red.getContact(msg.from_)
                     cName = contact.displayName
                     balas = ["Sekali lagi nge tag gw sumpahin jomblo seumur hidup!","Nggak Usah Tag-Tag! Kalo Penting Langsung Pc Aja","Woii " + cName + " Jangan Ngetag, Riibut!"]
                     ret_ = random.choice(balas)
@@ -892,7 +892,7 @@ def bot(op):
                               
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention3"] == True:          
-                    contact = nadya.getContact(msg.from_)
+                    contact = red.getContact(msg.from_)
                     cName = contact.displayName
                     balas = ["Woii " + cName + ", Dasar Jones Ngetag Mulu!"]
                     balas1 = "Ini Foto Sii Jones Yang Suka Ngetag. . ."
@@ -1033,9 +1033,9 @@ def bot(op):
  
             elif msg.text in ["Creator","Owner"]:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': tjia}
-                nadya.sendMessage(msg)
-		red.sendText(msg.to,"Itu Majikan Kami (^_^)")
+                msg.contentMetadata = {'mid':"ub5abe828cd964292195c3c59d6322033"}
+                red.sendMessage(msg)
+		red.sendText(msg.to,"ผู้สร้าง คือ คนนี้ (^_^)")
 
  
 
@@ -1075,8 +1075,8 @@ def bot(op):
                         for target in targets:
                             try:
                                 red.findAndAddContactsByMid(target)
-                                contact = nadya.getContact(target)
-                                cu = nadya.channel.getCover(target)
+                                contact = red.getContact(target)
+                                cu = red.channel.getCover(target)
                                 path = str(cu)
                                 image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                                 red.sendText(msg.to,"Nama :\n" + contact.displayName + "\n\nMid :\n" + msg.contentMetadata["mid"] + "\n\nBio :\n" + contact.statusMessage)
@@ -1094,7 +1094,7 @@ def bot(op):
                 if wait["gift"] == True:
                     _name = msg.contentMetadata["displayName"]
                     copy = msg.contentMetadata["mid"]
-                    groups = nadya.getGroup(msg.to)
+                    groups = red.getGroup(msg.to)
                     pending = groups.invitee
                     targets = []
                     for s in groups.members:
@@ -1128,7 +1128,7 @@ def bot(op):
                 if wait["copy"] == True:
                     _name = msg.contentMetadata["displayName"]
                     copy = msg.contentMetadata["mid"]
-                    groups = nadya.getGroup(msg.to)
+                    groups = red.getGroup(msg.to)
                     targets = []
                     for s in groups.members:
                         if _name in s.displayName:
@@ -1156,7 +1156,7 @@ def bot(op):
                 if wait['invite'] == True:
                      _name = msg.contentMetadata["displayName"]
                      invite = msg.contentMetadata["mid"]
-                     groups = nadya.getGroup(msg.to)
+                     groups = red.getGroup(msg.to)
                      pending = groups.invitee
                      targets = []
                      for s in groups.members:
@@ -1228,7 +1228,7 @@ def bot(op):
 			else:
 			    pass
 		else:
-		    red.sendText(msg.to, "Khusus Nadya")
+		    red.sendText(msg.to, "Khusus red")
  
             elif msg.text in ["List ban","List ban group"]:
 		if msg.from_ in admin:
@@ -1237,7 +1237,7 @@ def bot(op):
                     else:
                         mc = ""
                         for gid in wait["BlGroup"]:
-                            mc += "-> " +nadya.getGroup(gid).name + "\n"
+                            mc += "-> " +red.getGroup(gid).name + "\n"
                         red.sendText(msg.to,"===[Ban Group]===\n"+mc)
 		else:
 		    red.sendText(msg.to, "Khusus Admin")
@@ -1252,7 +1252,7 @@ def bot(op):
 		        else:
 			    pass
 		else:
-		    red.sendText(msg.to, "Khusus Nadya")
+		    red.sendText(msg.to, "Khusus red")
  
             elif "Join group: " in msg.text:
 		ng = msg.text.replace("Join group: ","")
@@ -1267,7 +1267,7 @@ def bot(op):
 			    else:
 			        pass
 		    else:
-		        red.sendText(msg.to,"Khusus Nadya")
+		        red.sendText(msg.to,"Khusus red")
 		except Exception as e:
 		    red.sendText(msg.to, str(e))
  
@@ -1284,7 +1284,7 @@ def bot(op):
 			else:
 			    pass
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
  
 	    elif "Leave all group" == msg.text:
 		gid = red.getGroupIdsJoined()
@@ -1294,7 +1294,7 @@ def bot(op):
 		        red.leaveGroup(i)
 		    red.sendText(msg.to,"Success Leave All Group")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 		   
 
             elif "Pict group: " in msg.text:
@@ -1320,7 +1320,7 @@ def bot(op):
  
             elif msg.text in ["Ourl","Url on"]:
                 if msg.toType == 2:
-                    X = nadya.getGroup(msg.to)
+                    X = red.getGroup(msg.to)
                     X.preventJoinByTicket = False
                     red.updateGroup(X)
                     red.sendText(msg.to,"Url Sudah Aktif")
@@ -1343,14 +1343,14 @@ def bot(op):
                     wait["AutoJoinCancel"] = False
                     red.sendText(msg.to,"Auto Join Sudah Aktif")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Join off","Autojoin off"]:
 		if msg.from_ in admin:
                     wait["AutoJoin"] = False
                     red.sendText(msg.to,"Auto Join Sudah Di Nonaktifkan")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 		    
 		    
             elif msg.text in ["Joincancel on","Autojoincancel on"]:
@@ -1359,14 +1359,14 @@ def bot(op):
                     wait["AutoJoin"] = False
                     red.sendText(msg.to,"Auto Join Cancel Sudah Aktif")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Joincancel off","Autojoincancel off"]:
 		if msg.from_ in admin:
                     wait["AutoJoinCancel"] = False
                     red.sendText(msg.to,"Auto Join Cancel Sudah Di Nonaktifkan")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")		    
+		    red.sendText(msg.to,"Khusus red")		    
 		    
  
             elif msg.text in ["Respon1 on"]:
@@ -1377,14 +1377,14 @@ def bot(op):
                     wait["kickMention"] = False
                     red.sendText(msg.to,"Auto Respon1 Sudah Aktif")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Respon1 off"]:
 		if msg.from_ in admin:
                     wait["detectMention"] = False
                     red.sendText(msg.to,"Auto Respon1 Sudah Off")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")	
+		    red.sendText(msg.to,"Khusus red")	
 		    
 		    
             elif msg.text in ["Respon2 on"]:
@@ -1401,7 +1401,7 @@ def bot(op):
                     wait["detectMention2"] = False
                     red.sendText(msg.to,"Auto Respon2 Sudah Off")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")	
+		    red.sendText(msg.to,"Khusus red")	
 		    
 
             elif msg.text in ["Respon3 on"]:
@@ -1412,14 +1412,14 @@ def bot(op):
                     wait["kickMention"] = False
                     red.sendText(msg.to,"Auto Respon3 Sudah Aktif")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Respon3 off"]:
 		if msg.from_ in admin:
                     wait["detectMention3"] = False
                     red.sendText(msg.to,"Auto Respon3 Sudah Off")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")	
+		    red.sendText(msg.to,"Khusus red")	
 		    
  
             elif msg.text in ["Responkick on"]:
@@ -1430,14 +1430,14 @@ def bot(op):
                     wait["detectMention3"] = False                    
                     red.sendText(msg.to,"Auto Respon Kick Sudah Aktif")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Responkick off"]:
 		if msg.from_ in admin:
                     wait["kickMention"] = False                    
                     red.sendText(msg.to,"Auto Respon Kick Sudah Off")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")			  
+		    red.sendText(msg.to,"Khusus red")			  
 		    
  
 	    elif msg.text in ["Autocancel on"]:
@@ -1446,7 +1446,7 @@ def bot(op):
                 red.sendText(msg.to,"Auto Cancel Sudah Aktif")
 		print wait["AutoCancel"]
 	     else:
-		    red.sendText(msg.to,"Khusus Nadya")		
+		    red.sendText(msg.to,"Khusus red")		
 
 	    elif msg.text in ["Autocancel off"]:
 	     if msg.from_ in admin:	        
@@ -1454,7 +1454,7 @@ def bot(op):
                 red.sendText(msg.to,"Auto Cancel Sudah Di Nonaktifkan")
 		print wait["AutoCancel"]
 	     else:
-		    nadya.sendText(msg.to,"Khusus Nadya")	
+		    nadya.sendText(msg.to,"Khusus red")	
 		    
 
 	    elif msg.text in ["Invitepro on"]:
@@ -1463,7 +1463,7 @@ def bot(op):
                 red.sendText(msg.to,"Invite Protect Sudah Aktif")
 		print wait["inviteprotect"]
 	     else:
-		    red.sendText(msg.to,"Khusus Nadya")		
+		    red.sendText(msg.to,"Khusus red")		
 
 	    elif msg.text in ["Invitepro off"]:
 	     if msg.from_ in admin:	        
@@ -1471,21 +1471,21 @@ def bot(op):
                 red.sendText(msg.to,"Invite Protect Sudah Di Nonaktifkan")
 		print wait["inviteprotect"]
 	     else:
-		    red.sendText(msg.to,"Khusus Nadya")		    
+		    red.sendText(msg.to,"Khusus red")		    
 
 	    elif "Qr on" in msg.text:
 	     if msg.from_ in admin:	        
 	        wait["Qr"] = True
 	    	red.sendText(msg.to,"QR Protect Sudah Aktif")
 	     else:
-		    red.sendText(msg.to,"Khusus Nadya")	    	
+		    red.sendText(msg.to,"Khusus red")	    	
 
 	    elif "Qr off" in msg.text:
 	     if msg.from_ in admin:	        
 	    	wait["Qr"] = False
 	    	red.sendText(msg.to,"Qr Protect Sudah Di Nonaktifkan")
 	     else:
-		    red.sendText(msg.to,"Khusus Nadya")	    	
+		    red.sendText(msg.to,"Khusus red")	    	
 
                         
 
@@ -1494,14 +1494,14 @@ def bot(op):
 		     wait["AutoKick"] = True
 		     red.sendText(msg.to,"Auto Kick Sudah Aktif")
 	     else:
-	        red.sendText(msg.to,"Khusus Nadya")	     
+	        red.sendText(msg.to,"Khusus red")	     
 
 	    elif "Autokick off" in msg.text:
 	     if msg.from_ in admin:	 	        
 		     wait["AutoKick"] = False
 		     red.sendText(msg.to,"Auto Kick Sudah Di Nonaktifkan")
 	     else:
-	        red.sendText(msg.to,"Khusus Nadya")	     
+	        red.sendText(msg.to,"Khusus red")	     
 
 
             elif msg.text in ["Allprotect on"]:
@@ -1512,7 +1512,7 @@ def bot(op):
                     wait["Qr"] = True
                     red.sendText(msg.to,"All Protect Sudah Aktif Semua")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
             elif msg.text in ["Allprotect off"]:
 		if msg.from_ in admin:
@@ -1522,7 +1522,7 @@ def bot(op):
                     wait["Qr"] = False
                     red.sendText(msg.to,"All Protect Sudah Di Nonaktifkan Semua")
 		else:
-		    red.sendText(msg.to,"Khusus Nadya")
+		    red.sendText(msg.to,"Khusus red")
 
 
             elif msg.text in ["K on","Contact on"]:
@@ -2249,7 +2249,7 @@ def bot(op):
                         subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
                         red.sendText(msg.to, "☆Auto Checkpoint☆")                        
                     else:
-                        nadya.sendText(msg.to, "☆Belum Ada Viewers☆")
+                        red.sendText(msg.to, "☆Belum Ada Viewers☆")
                     print "Viewseen"
 
 
@@ -2343,7 +2343,7 @@ def bot(op):
                 red.inviteIntoGroup(msg.to,[midd])
 
             elif msg.text in ["Welcome","welcome","Welkam","welkam","Wc","wc"]:
-                gs = nadya.getGroup(msg.to)
+                gs = red.getGroup(msg.to)
                 red.sendText(msg.to,"Selamat Datang Di "+ gs.name)
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '247',
@@ -2353,7 +2353,7 @@ def bot(op):
                 red.sendMessage(msg)
  
             elif msg.text in ["เยส","เยสส","เยส..."]:
-                gs = nadya.getGroup(msg.to)
+                gs = red.getGroup(msg.to)
                 red.sendText(msg.to,"เห็นแล้วมันงึด")
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '121',
@@ -2363,7 +2363,7 @@ def bot(op):
                 red.sendMessage(msg)
                 
             elif msg.text in ["เดะโดน","ว่าไงนะ","หา..."]:
-                gs = nadya.getGroup(msg.to)
+                gs = red.getGroup(msg.to)
                 red.sendText(msg.to,"เดะปัดเหนี่ยวเลย")
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '102',
@@ -2373,7 +2373,7 @@ def bot(op):
                 red.sendMessage(msg)
                 
             elif msg.text in ["เงียบ","กริบ"]:
-                gs = nadya.getGroup(msg.to)
+                gs = red.getGroup(msg.to)
                 red.sendText(msg.to,"ป่าช้าชัดๆ")
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '113',
@@ -2383,7 +2383,7 @@ def bot(op):
                 red.sendMessage(msg)
                 
             elif msg.text in ["บาย","ลาก่อน","ไปแระ"]:
-                gs = nadya.getGroup(msg.to)
+                gs = red.getGroup(msg.to)
                 red.sendText(msg.to,"แล้วเจอกันใหม่นะ😭😭")
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '42',
@@ -2394,7 +2394,7 @@ def bot(op):
 
 	    elif "Bc: " in msg.text:
 		bc = msg.text.replace("Bc: ","")
-		gid = nadya.getGroupIdsJoined()
+		gid = red.getGroupIdsJoined()
 		if msg.from_ in Creator:
 		    for i in gid:
 			red.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~nad_nad.")
@@ -2414,7 +2414,7 @@ def bot(op):
                     if x.preventJoinByTicket == True:
                         x.preventJoinByTicket = False
                         red.updateGroup(x)
-                    gurl = nadya.reissueGroupTicket(msg.to)
+                    gurl = red.reissueGroupTicket(msg.to)
                     red.sendText(msg.to,"line://ti/g/" + gurl)
                 else:
                     if wait["lang"] == "JP":
@@ -2425,7 +2425,7 @@ def bot(op):
 
             elif msg.text in ["timeline"]:
 		try:
-                    url = nadya.activity(limit=5)
+                    url = red.activity(limit=5)
 		    red.sendText(msg.to,url['result']['posts'][0]['postInfo']['postId'])
 		except Exception as E:
 		    print E
@@ -2651,7 +2651,7 @@ def bot(op):
 					data = json.loads(data)
 					for song in data:
 						abc = song[3].replace('https://','http://')
-						nadya.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4])
+						red.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4])
 						red.sendText(msg.to, "Lagu " + song[0] + "\nSedang Di Prosses... Tunggu Sebentar ^_^ ")
 						red.sendAudioWithURL(msg.to,abc)
 						red.sendText(msg.to, "Selamat Mendengarkan Lagu " + song[0])
