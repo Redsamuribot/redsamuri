@@ -60,6 +60,7 @@ helpMessage ="""╔═════════════
 ║╠[32]Masuk
 ║╠[33]Keluar
 ║╠[34]Ready op
+║╠[35]Red on/off
 ║║★And More★
 ║╚════════════
 ║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓
@@ -942,7 +943,7 @@ def bot(op):
                 cl.sendMessage(msg)
                 
 #-------------------- Protect Mode ------------
-            elif msg.text in ["Allprotect on","Mode on"]:
+            elif msg.text in ["Allprotect on","Red on"]:
                 if wait["Protectjoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Kick Joined Group On􀜁􀇊􏿿")
@@ -995,7 +996,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
 
-            elif msg.text in ["Allprotect off","Mode Off"]:
+            elif msg.text in ["Allprotect off","Red Off"]:
                 if wait["Protectjoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Kick Joined Group Off")
@@ -1302,7 +1303,7 @@ def bot(op):
                 if wait["autoAdd"] == True: md+="[•]Auto Add [On]\n"
                 else:md+="[•]Auto Add [Off]\n"
                 if wait["commentOn"] == True: md+="[•]Comment [On]\n"
-                else:md+="[•]Comment [Off]\n*============*\n✰૦Ո૯ ƿɿ૯८૯ ら૯ՆԲც૦੮✰\n*============*"
+                else:md+="[•]Comment [Off]\n*============*\n✰Redsamuriselfbot✰\n*============*"
                 cl.sendText(msg.to,md)
             elif msg.text in ["Group id","Ginfo"]:
                 gid = cl.getGroupIdsJoined()
