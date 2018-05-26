@@ -24,7 +24,7 @@ class LINE:
   def __init__(self):
     self.Talk = Talk()
     self._session = requests.session()
-    self._headers = {'X-Line-Application': 'IOSIPAD\t7.18.0\tiPhone OS\t11.12.1', 'X-Line-Access': 'self.authToken', 'User-Agent': 'Line/8.0.0 iPad4,1 9.0.2'}
+    self._headers = {'X-Line-Application': 'DESKTOPMAC	8.5.2	HELLO-WORLD	12.13.2', 'X-Line-Access': 'self.authToken', 'User-Agent': 'DESKTOPMAC	8.5.2	HELLO-WORLD	12.13.2'}
 
   def login(self, mail=None, passwd=None, cert=None, token=None, qr=False, callback=None):
     if callback is None:
@@ -44,9 +44,9 @@ class LINE:
     self.authToken = self.Talk.authToken
     self.cert = self.Talk.cert
     self._headers = {
-              'X-Line-Application': 'IOSIPAD\t7.18.0\tiPhone OS\t11.12.1',
+              'X-Line-Application': 'DESKTOPMAC	8.5.2	HELLO-WORLD	12.13.2',
               'X-Line-Access': self.authToken,
-              'User-Agent': 'Line/8.0.0'
+              'User-Agent': 'DESKTOPMAC	8.5.2	HELLO-WORLD	12.13.2'
    }
 
     self.Poll = Poll(self.authToken)
